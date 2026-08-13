@@ -1,0 +1,8 @@
+.pista {
+    width: 24rem;
+    border: 2px solid #243447;
+}
+
+.corredor{
+    border-bottom: 1px dashed #B8C2CC;
+}
