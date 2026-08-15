@@ -1,0 +1,245 @@
+.contenedor {
+    background-color: rgb(255, 242, 192);
+    padding: 12px;
+    margin: 8px;
+}
+
+.marca-blog {
+    font-size: 2rem;
+    font-family: system-ui;
+    color: rgb(231, 144, 77);
+}
+
+.cabecera-blog {
+    padding: 1rem;
+    background-color: rgb(246, 198, 110);
+    border: 2.5px solid rgb(179, 118, 21);
+}
+
+.cabecera-blog nav a {
+    margin-right: 1.25rem;
+    color: rgb(104, 66, 37);
+}
+
+.entrada {
+    width: 100%;
+    max-width: 50rem;
+    margin-top: 0.5rem;
+    padding: 1.5rem;
+    background-color: rgb(255, 237, 203);
+    border: 2px solid rgb(179, 118, 21);
+}
+
+.entrada h1 {
+    margin-top: 0;
+    color: rgb(121, 71, 32);
+}
+
+.resumen {
+    padding: .75rem;
+    background-color: rgb(255, 201, 92);
+    border-left: 4px solid rgb(121, 71, 32);
+}
+
+.entrada section {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgb(121, 71, 32);
+}
+
+.entrada h2 {
+    color: rgb(121, 71, 32);
+}
+
+.entrada a {
+    color: rgb(255, 149, 69);
+    border-bottom: 2px solid rgb(121, 71, 32)
+}
+
+.entrada a:hover {
+    color: rgb(59, 53, 48);
+    background-color: rgb(255, 201, 160);
+}
+
+.bloque {
+    display: block;
+    padding: .75rem;
+    background-color: rgb(255, 201, 160);
+    border: 2px solid rgb(225, 123, 45);
+}
+
+.en-linea {
+    display: inline;
+    padding: .75rem;
+    background-color: rgb(255, 201, 160);
+    border: 2px solid rgb(225, 123, 45);
+}
+
+.oculto {
+    display: none;
+}
+
+.estrella {
+    position: absolute;
+    top: 4rem;
+    right: 5rem;
+    padding: .5rem;
+    font-size: 2rem;
+    background-color: #FFF4D6;
+    border: 2px solid #D6A93A;
+    cursor: pointer;
+}
+
+.estado {
+    padding: .5rem;
+    background-color: #F4F7FA;
+    border: 2px solid #B8C2CC;
+}
+
+/* 
+Explicación de selectores:
+#estrella-encontrada selecciona el input checkbox.
+:checked verifica el estado seleccionado del elemento.
+~ busca los elementos hermanos adyacentes o siguientes.
+.estado es la clase del párrafo hermano del checkbox.
+*/
+#estrella-encontrada:checked~.estado {
+    color: white;
+    background-color: #145DA0;
+    border-color: #0B3D6E;
+}
+
+.tablero {
+    position: relative;
+    width: 28rem;
+    height: 16rem;
+    background-color: #E8F3E8;
+    border: 3px solid #79A879;
+}
+
+.ganaste {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    padding: .5rem;
+    color: white;
+    background-color: #145DA0;
+    border: 2px solid #0B3D6E;
+}
+
+#estrella-encontrada:checked~.ganaste {
+    display: block;
+}
+
+.aplicacion {
+    width: 22rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: rgb(255, 247, 225);
+    border: 2px solid rgb(218, 164, 15);
+    border-radius: .75rem;
+}
+
+.aplicacion h1 {
+    margin-top: 0;
+    color: rgb(173, 128, 5);
+}
+
+.tarea {
+    padding: 1rem;
+    background-color: rgb(247, 242, 155);
+    border: 2px solid rgb(218, 164, 15);
+    border-radius: .5rem;
+}
+
+.tarea label {
+    color: rgb(119, 91, 14);
+    cursor: pointer;
+}
+
+.tarea input:checked~h2 {
+    color: rgb(127, 131, 114);
+}
+
+.tarea input:checked~.estado {
+    color: rgb(34, 101, 5);
+    background-color: rgb(192, 235, 174);
+    border-color: rgb(39, 113, 8);
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.fila span,
+.columna span {
+    padding: .75rem;
+    background-color: #DCECF9;
+    border: 2px solid #7AAED6;
+}
+
+.columna {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #E8F3E8;
+    border: 2px solid #79A879;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tarjeta {
+    width: 14rem;
+    padding: 1rem;
+    background-color: #FFF4D6;
+    border: 2px solid #D6A93A;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    max-width: 32rem;
+}
+
+/* Empujar un elemento usando el espacio libre */
+.salir {
+    margin-left: auto;
+}
+
+/* Alinear un solo item */
+.formulario button {
+    align-self: flex-start;
+}
+
+/* Asignar crecimiento y una base */
+.tarjeta {
+    flex: 1 1 14rem;
+}

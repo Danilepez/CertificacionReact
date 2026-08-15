@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="cabecera-blog">
+            <a class="marca-blog" href="#inicio">Marca del Blog</a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#articulo">Artículo</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </header>
+
+        <article id="articulo" class="entrada">
+            <h1>Título Principal</h1>
+            <p class="resumen">Texto del resumen del artículo.</p>
+            <section>
+                <h2>Sección 1</h2>
+                <p>Contenido del primer párrafo de la primera sección.</p>
+                <p>Contenido del segundo párrafo de la primera sección.</p>
+            </section>
+            <section>
+                <h2>Sección 2</h2>
+                <p>Contenido de la segunda sección.</p>
+                <a href="#conclusion">
+                    Enlace a la conclusión
+                </a>
+            </section>
+            <section id="conclusion">
+                <h2>Conclusión</h2>
+                <p>Texto de la conclusión del artículo.</p>
+            </section>
+        </article>
+    </div>
+
+    <div class="contenedor">
+        <p class="bloque">Párrafo con comportamiento de bloque.</p>
+        <a class="en-linea" href="#articulo">Elemento en línea 1</a>
+        <a class="en-linea" href="#conclusion">Elemento en línea 2</a>
+        <p class="oculto">
+            Texto oculto de prueba 1.
+        </p>
+        <p class="oculto">
+            Texto oculto de prueba 2.
+        </p>
+    </div>
+
+    <div class="contenedor">
+        <p>Juego interactivo: Encontrar la estrella.</p>
+
+        <main class="tablero">
+            <input id="estrella-encontrada" type="checkbox">
+            <label class="estrella" for="estrella-encontrada">&#11088;</label>
+            <p class="ganaste">Estrella encontrada</p>
+        </main>
+
+    </div>
+
+    <div class="contenedor">
+        <p>Aplicación de agenda organizadora.</p>
+
+        <main class="aplicacion">
+            <h1>Organizador de Tareas</h1>
+            <article class="tarea">
+                <input id="presentacion" type="checkbox">
+                <label for="presentacion">Tarea terminada</label>
+                <h2>Título de la tarea</h2>
+                <p>Descripción detallada de la tarea a realizar en el organizador.</p>
+                <p class="estado">Pendiente</p>
+            </article>
+        </main>
+    </div>
+
+    <div class="contenedor">
+        <p>Demostración Flex en Fila (Row)</p>
+        <div class="fila">
+            <span>Uno</span>
+            <span>Dos</span>
+            <span>Tres</span>
+        </div>
+        <p>Demostración Flex en Columna (Column)</p>
+        <div class="columna">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+        </div>
+
+        <header class="barra">
+            <strong>Taller Web</strong>
+            <nav>
+                <a href="#datos">Datos</a>
+                <a href="#ayuda">Ayuda</a>
+            </nav>
+        </header>
+
+        <p>Contenedor responsivo utilizando Flex Wrap.</p>
+        <section class="tarjetas">
+            <article class="tarjeta">HTML</article>
+            <article class="tarjeta">CSS</article>
+            <article class="tarjeta">Accesibilidad</article>
+        </section>
+    </div>
+
+    <div class="contenedor">
+        <header class="cabecera">
+            <a class="marca" href="index.html">Taller Web</a>
+            <nav aria-label="Principal">
+                <a href="#datos">Datos</a>
+                <a href="#ayuda">Ayuda</a>
+            </nav>
+        </header>
+
+        <form class="formulario">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre">
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="barra">
+            <strong>Cuenta</strong>
+            <button class="salir">Salir</button>
+        </div>
+        <section class="tarjetas">
+            <article class="tarjeta">Tarjeta flexible 1</article>
+            <article class="tarjeta">Tarjeta flexible 2</article>
+        </section>
+    </div>
+</body>
+
+</html>
