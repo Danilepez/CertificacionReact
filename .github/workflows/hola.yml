@@ -20,3 +20,7 @@ jobs:
         run: node -v
       - name: Verificar npm
         run: npm -v
+      - name: Instalar dependencias
+        run: npm install
+      - name: Verificar eslint
+        run: npm run check.js
