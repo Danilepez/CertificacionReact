@@ -1,3 +1,3 @@
-function mifunction (parametro){
-    console.log("holaaaa" + "" + parametro);
-}
+// function mifunction (parametro){
+//     console.log("holaaaa" + "" + parametro);
+// }

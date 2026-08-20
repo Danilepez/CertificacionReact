@@ -1,4 +1,4 @@
-const a = s;
-a = b;
-b=c;
-c=4;
+// const a = s;
+// a = b;
+// b=c;
+// c=4;
