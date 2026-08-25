@@ -19,4 +19,4 @@ jobs:
       - name: Instalar TypeScript
         run: npm install typescript --save-dev
       - name: Verificar TypeScript
-        run: npx tsc --noEmit
+        run: npx tsc --noEmit clase16\clase16.ts
