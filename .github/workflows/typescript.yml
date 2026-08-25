@@ -1,0 +1,20 @@
+name: Typescript
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Verificar TypeScript
+        run: npx tsc --noEmit
