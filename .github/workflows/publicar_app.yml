@@ -1,0 +1,60 @@
+name: publicar app
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'clase18/contador/**'
+      - '.github/workflows/publicar-app.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: clase18/contador
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: clase18/contador/package-lock.json
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Generar carpeta dist
+        run: npm run build
+
+      - name: Subir dist
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./clase18/contador/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
