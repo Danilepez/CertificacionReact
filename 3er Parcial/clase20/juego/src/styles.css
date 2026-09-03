@@ -1,0 +1,23 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    position: relative;
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.base-jugador {
+    width: 14vw;
+    height: 6vh;
+    background-color: #2563eb;
+    position: absolute;
+    bottom: 0px;
+}
